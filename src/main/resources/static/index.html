@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello WebSocket</title>
+    <link href="/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/jquery-1.10.2.min.js"></script>
+    <script src="/app.js"></script>
+    <script src="/stomp.js"></script>
+    
+</head>
+<body onload="connect()">
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div id="main-content" class="container">
+    <div class="row">
+        
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="name">Enter the Price</label>
+                    <input type="number" id="price" class="form-control" placeholder="Enter your price...">
+                    <button id="send" class="btn btn-default" type="button">Send</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="conversation" class="table table-striped">
+                <thead>
+                <tr>
+                	<th>S.No</th>
+                    <th>Last Price</th>
+                </tr>
+                </thead>
+                <tbody id="greetings">
+                </tbody>
+            </table>
+            <div style='float: left;font-size: x-large; color: #FF0000;'>Average: <div style='float: right;' id='averageVal'></div>
+        </div>
+    </div>
+ 
+</div>
+</body>
+</html>
